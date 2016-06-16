@@ -1,0 +1,34 @@
+{
+  "name": "proxo",
+  "version": "0.1.0",
+  "description": "Simple proxy server",
+  "main": "index.js",
+  "bin": {
+    "proxo": "bin/proxo.js"
+  },
+  "dependencies": {
+    "colors": "^1.1.2",
+    "optimist": "^0.6.1",
+    "request": "^2.72.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamso/proxo.git"
+  },
+  "keywords": [
+    "simple",
+    "proxy",
+    "proxo",
+    "server"
+  ],
+  "author": "iamso <so@dev.so>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iamso/proxo/issues"
+  },
+  "homepage": "https://github.com/iamso/proxo#readme"
+}
