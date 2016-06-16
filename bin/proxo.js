@@ -2,6 +2,7 @@
 
 var colors = require('colors');
 var ifaces = require('os').networkInterfaces();
+var cp = require('copy-paste');
 var proxo = require('../index');
 
 var argv = require('optimist').argv;
@@ -26,6 +27,7 @@ function callback(host, port) {
   message += colors.bold(`internal: ${colors.green(internal)}\n`);
   message += colors.bold(`external: ${colors.green(external)}\n`);
   message += `\nPress Ctrl+C to exit`;
+  cp.copy(external);
   console.log(message);
 }
 
