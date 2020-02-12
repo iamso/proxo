@@ -1,5 +1,7 @@
 #! /usr/bin/env node
 
+require('win-ca');
+require('mac-ca');
 const colors = require('colors');
 const ifaces = require('os').networkInterfaces();
 const cp = require('copy-paste');
