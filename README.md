@@ -56,7 +56,7 @@ If you're using named arguments, use the following in any order:
 
 
 ## License
-Copyright (c) 2016 Steve Ottoz
+Copyright (c) 2020 Steve Ottoz
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
