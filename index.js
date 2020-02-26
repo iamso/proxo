@@ -8,7 +8,7 @@ module.exports = (host, port, callback) => {
 
   const server = http.createServer((req, res) => {
     if (host) {
-      req.pipe(request(host + req.url)).pipe(res)
+      req.pipe(request(host + req.url)).pipe(res);
     }
     else {
       res.writeHead(404);
