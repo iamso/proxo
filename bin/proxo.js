@@ -3,7 +3,7 @@
 require('win-ca');
 require('mac-ca');
 const colors = require('colors');
-const ifaces = require('os').networkInterfaces();
+const ip = require('ip');
 const cp = require('copy-paste');
 const qrcode = require('qrcode-terminal');
 const proxo = require('../index');
@@ -13,19 +13,8 @@ const port = process.env.PORT || argv.p || argv._[1] || 0;
 const host = (argv.h || argv._[0] || 'localhost');
 
 const callback = (host, port) => {
-  let ip;
-
-  Object.keys(ifaces).forEach(dev => {
-    ifaces[dev].forEach(details => {
-      if (!ip && details.family === 'IPv4' && !details.internal) {
-        ip = details.address;
-      }
-    ;
-    });
-  });
-
   const internal = `http://localhost:${port}`;
-  const external = `http://${ip}:${port}`;
+  const external = `http://${ip.address()}:${port}`;
 
   qrcode.generate(external, {small: true}, qr => {
     let message = `\nProxy for ${colors.underline(host)}:\n\n`;
